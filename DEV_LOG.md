@@ -6,12 +6,17 @@
 
 ## 기술 스택 선정 이유
 - Python: 데이터 수집, 파싱, 텍스트 처리 및 빠른 MVP 개발에 적합
-- FastMCP: AI 에이전트가 로컬 리소스와 도구를 안전하게 호출하도록 MCP 규격 제공
-- Streamlit: 분석 결과와 공고 리스트를 빠르게 시각화 가능한 경량 프론트엔드
+- FastAPI: REST API 서버. 자동 문서화(Swagger), async 지원, Pydantic 모델 통합
+- Vue 3 + Vite: SPA 프론트엔드. 컴포넌트 기반, 빠른 HMR, Composition API
+- OpenAI API: 이력서-공고 간 AI 기반 적합도 분석 (gpt-4o-mini)
 - BeautifulSoup: 사람인 페이지 구조 파싱을 위한 안정적 HTML 스크레이핑 도구
+- pypdf: PDF 이력서 텍스트 추출 (PyPDF2 후속 라이브러리)
 
 ## 작업 단위별 의사결정 기록
 - 2026-03-11: 1단계 MVP 범위 확정 (스크래퍼, MCP 서버, Streamlit UI, 1차 필터)
 - 2026-03-11: 공고 저장 포맷을 JSON으로 결정하여 MCP 리소스 제공 및 UI 로딩을 단순화
 - 2026-03-11: 노이즈 필터 기준을 키워드 기반 1차 룰로 설정 (단순 서비스/판매/레슨 등)
 - 2026-03-11: 스포츠 융합 직무 정밀도를 높이기 위해 포함/제외 키워드 확장 및 UI 필터링 점수 도입
+- 2026-03-11: be/fe 분리 구조로 전환 — FastAPI REST API + Vue 3 SPA
+- 2026-03-11: OpenAI API 연동으로 AI 기반 이력서-공고 매칭 분석 추가
+- 2026-03-11: Streamlit → Vue 3 프론트엔드 전환 (컴포넌트: 대시보드, 공고목록, 이력서 관리)

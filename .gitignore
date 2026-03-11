@@ -8,8 +8,23 @@ __pycache__/
 .venv/
 venv/
 .env
-.env.*
+.env.local
+.env.production
 .DS_Store
 Thumbs.db
 data/
 /data/*.json
+
+# Backend
+be/data/
+be/resumes/
+
+# Frontend
+fe/node_modules/
+fe/dist/
+
+# Legacy (v1 루트 파일)
+/app.py
+/scraper.py
+/ats_server.py
+/requirements.txt
