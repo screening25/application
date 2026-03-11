@@ -11,4 +11,5 @@ venv/
 .env.*
 .DS_Store
 Thumbs.db
+data/
 /data/*.json
